@@ -23,7 +23,7 @@ enum table_mode
     find = 2
 };
 
-static unsigned long long * p_degrees = 0;
+static unsigned long long p_degrees[30] = {0};
 
 void table_ctor (struct hash_table* table);
 
