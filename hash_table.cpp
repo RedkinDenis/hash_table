@@ -2,7 +2,18 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <time.h>
+
+static unsigned long long pow (int x, int k);
+
+static void add_to_table (struct hash_table* table, const char* str);
+
+static unsigned long long get_hash (const char* str);
+
+static void node_dump (struct Node* node);
+
+static void node_ctor (struct Node* pos, const char* str);
+
+static int get_qant (struct hash_table* table, const char* str);
 
 unsigned long long pow (int x, int k)
 {
